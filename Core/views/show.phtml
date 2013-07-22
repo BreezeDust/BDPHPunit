@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<title>BDPHPunit</title>
+		<link href="CSS/show.css" rel="stylesheet" />
+		<script src="JS/jquery.js"></script>
+<script type="text/javascript">
+function show(obj){
+	$(obj).children().last().slideToggle("slow");
+}
+</script>
+	</head>
+	<body>
+		<div id="A">
+		<?php 
+			for($con=0;$con<count(self::$MesgArray);$con++){
+				$nowObj=self::$MesgArray[$con];
+				$classColor="";
+				if($nowObj->isOK) $classColor="style='color:#000000'";
+				?>
+				<div class="case">
+						<div class="classTest" <?php echo $classColor?>><?php echo $nowObj->name?></div>
+						<?php 
+							for($i=0;$i<count($nowObj->MethodArray);$i++){
+									$nowMethod=$nowObj->MethodArray[$i];
+									if($nowMethod->NOs>0){
+										?>
+										<div class="methodTest isNo" onclick="show(this)">
+											<div class="name"><?php echo $nowMethod->name?></div>
+											<div class="tags"><span>Pass : </span><span class="Pass"><?php echo $nowMethod->OKs?></span>&nbsp;&nbsp;&nbsp;<span>Failures : </span><span class="Failures"><?php echo $nowMethod->NOs?></span></div>
+											<div class="mesg">
+												<?php 
+													for($j=0;$j<count($nowMethod->NOArray);$j++){
+														?>
+														<div><?php echo $nowMethod->NOArray[$j]?></div>
+														<?php
+													}
+												?>
+													
+											</div>
+										</div>										
+										<?php
+									}
+									else {
+										?>
+											<div class="methodTest isOK">
+												<div class="name"><?php echo $nowMethod->name?></div>
+												<div class="tags"><span>Pass : </span><span><?php echo $nowMethod->OKs?></span></div>	
+											</div>
+										<?php 									
+									}
+							}
+						?>
+				</div>
+				<?php 
+			}
+		?>
+		</div>
+		<div id="B">
+			<h1>BDPHPunit</h1>
+			<h2>Unit Test Of PHP</h2>
+			<h3>&</h3>
+			<h4>Code by BreezeDust</h4>
+		</div>
+
+	</body>
+</html>
+

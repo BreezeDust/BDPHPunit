@@ -1,0 +1,130 @@
+@CHARSET "UTF-8";
+body{
+    margin:0px;
+    padding:0px;
+	
+}
+#B{
+	position:absolute;
+	right:0px;
+	top:0px;
+	margin: 0px;
+	position: fixed;
+	width: 20%;
+	height: 100%;
+	background-color: #5A5A66;	
+	
+}
+#A{
+	background-color: #ffffff;	
+}
+#B h1{
+	position:relative;
+	width:180px;
+	font-size:35px;
+	color:#111111;
+	margin:0px auto;
+	margin-top:100px;
+}
+#B h2{
+	position:relative;
+	width:190px;
+	font-size:25px;
+	color:#ffffff;
+	margin:0px auto;
+	margin-top:10px;
+
+}
+#B h3{
+	position:relative;
+	width:60px;
+	font-size:70px;
+	color:#ffffff;
+	margin:0px auto;
+	margin-top:10px;
+		
+}
+#B h4{
+	position:relative;
+	width:180px;
+	font-size:20px;
+	color:#ffffff;
+	margin:0px auto;
+	margin-top:10px;
+	
+}
+.case{
+	 
+}
+.classTest{
+	font-weight:bold;
+	color:#84A0C8;
+	font-size:22px;
+	height:60px;
+	width:65%;
+	line-height:60px;
+	padding-left:15px;
+	background-color: #4C5E4C;	
+}
+.methodTest{
+	position:relative;
+	color:#7988A9;
+	left:80px;
+}
+.methodTest .name{
+	width:250px;
+	padding-left:10px;
+}
+.methodTest .tags{
+	position:absolute;
+	left:300px;
+	top:0px;
+}
+.methodTest .tags .Pass{
+	color:#84A0C8;
+}
+.methodTest .tags .Failures{
+	color:#ADA372;
+}
+.methodTest .tags span{
+	color:#ffffff;
+	font-weight:bold;
+}
+.isNo .tags span{
+	color:#222222;
+	font-weight:bold;
+}
+.isNo{
+	cursor:pointer;
+	background-color: #5A5A66;	
+	color:#ffffff;
+	line-height:40px;
+	border-bottom:#FFFFCC solid 1px;
+}
+.isNo .name{
+	background-color: #444444;	
+}
+.isOK {
+	background-color: #84A087;	
+	color:#ffffff;
+	left:180px;	
+	height:40px;
+	line-height:40px;
+	border-bottom:#FFFFCC solid 1px;
+}
+.isOK .name{
+	color:#444444;
+}
+.mesg{
+	display:none;
+	position:relative;
+	margin-top:0px;
+	top:0px;
+	padding-top=0px;
+	background-color: #54726D;
+	padding-left:30px;
+}
+.noMessg{
+	color:#9999FF;
+	font-weight:bold;
+}

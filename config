@@ -1,0 +1,4 @@
+	<?php
+	define("ROOTDIR",dirname(__FILE__)); //测试框架根目录
+	define("PROJECT", realpath(dirname(__FILE__).'/../')); //测试目标项目根目录
+	?>
